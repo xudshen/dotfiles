@@ -4,3 +4,6 @@
 [submodule "home/.vim/bundle/Vundle.vim"]
 	path = home/.vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "home/.pentadactyl/library/pentadactyl-solarized"]
+	path = home/.pentadactyl/library/pentadactyl-solarized
+	url = https://github.com/xudshen/pentadactyl-solarized.git
