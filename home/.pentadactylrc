@@ -1,0 +1,30 @@
+"hg7101
+
+loadplugins '\.(js|penta)$'
+group user
+map -count -modes=n,v j -builtin <count>3j
+map -count -modes=n,v k -builtin <count>3k
+map -count -modes=n h <count>gT
+map -count -modes=n l -builtin <count><C-n>
+map -count -modes=n,v , -builtin <count><C-o>
+map -count -modes=n,v . -builtin <count><C-i>
+
+set guioptions=bCrs
+set showtabline=never
+set hintkeys=hjklasdfgyuiopqwertnmzxcvb
+
+" set color scheme
+colorscheme solarized-light
+hi Normal font-size: 10pt
+
+" custom javascript
+javascript <<EOF
+function mamamac(){var l = content.document.createElement('link');l.setAttribute('rel','stylesheet');l.setAttribute('media','all');l.setAttribute('href','http://zythum.sinaapp.com/youkuhtml5playerbookmark/youkuhtml5playerbookmark2.css');content.document.body.appendChild(l);var s = content.document.createElement('script');s.setAttribute('src','http://zythum.sinaapp.com/youkuhtml5playerbookmark/youkuhtml5playerbookmark2.js');content.document.body.appendChild(s);};
+
+function kindle(){ var v = new RegExp('PersonalDocuments'); if (!v.test(content.document.URL)) {alert("The script can only work in Personal Documents!");}else{a=content.document.getElementsByClassName('rowBodyCollapsed');b=content.document.getElementsByName('checkboxForDelete');if(b.length==0){content.document.getElementById('Row1Button').innerHTML += "<a href='javascript:(function(){for(var i=0;i<b.length;i++){b[i].checked=true;};})();'>All</a><a href='javascript:(function(){for(var i=0;i<b.length;i++){b[i].checked=false;};})();'> None</a><a href='javascript:(function(){for(var i=0;i<b.length;i++){b[i].checked=!b[i].checked;};})();'> Reverse</a>";for(var i = 0; i<a.length; i++){ tmp=content.document.getElementById('Row' + (i+1) + 'Button'); tmp.innerHTML += "<input type='checkbox' name='checkboxForDelete' >";};}else{for(var i = 0; i<b.length; i++){if(b[i].checked){content.wrappedJSObject.Fion.deleteItem('deleteItem_'+a[i].getAttribute('asin'));}};}return;}}
+EOF
+
+map mm -js mamamac()
+map ki -js kindle()
+
+" vim: set ft=pentadactyl:
