@@ -59,7 +59,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export JBOSS_HOME=/usr/local/opt/jboss-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
 # go path
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=${HOME}/Workspace/go
+export PATH=$PATH:${GOROOT}/bin
 # android studio path
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 # node.js path
