@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible              " be improved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -11,11 +11,31 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'zenorocha/dracula-theme'
 
+" editor
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
+Plugin 'majutsushi/tagbar'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" file system
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+
+" language
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-markdown'
 Plugin 'fatih/vim-go'
+Bundle "pangloss/vim-javascript"
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,3 +53,5 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
+set number
+let mapleader = ','

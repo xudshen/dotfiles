@@ -1,6 +1,6 @@
 ### custom
 home/.vim/bundle
-
+home/.emacs.d/el-get
 
 ### https://raw.github.com/github/gitignore/bbc1713bd8149fda8f99a5fe29aba12745d161dc/Global/vim.gitignore
 
