@@ -9,32 +9,62 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+
+" theme
 Plugin 'zenorocha/dracula-theme'
 
-" editor
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
+" status line
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+" fuzzy search
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/unite-outline'
+Plugin 'Shougo/unite-help'
+Plugin 'Shougo/unite-session'
+
+" snippets
+"Plugin 'honza/vim-snippets'
+
+" marks
+"Plugin 'airblade/vim-gitgutter'
+
+" comments
+Plugin 'scrooloose/nerdcommenter'
+
+" file browsing
+Plugin 'scrooloose/nerdtree'
+"Plugin 'kien/ctrlp.vim'
+
+" shell
+"Plugin 'thinca/vim-quickrun'
+"Plugin 'Shougo/vimshell'
+"Plugin 'tpope/vim-dispatch'
+
+" tags
 Plugin 'majutsushi/tagbar'
+
+" motions
 Plugin 'Lokaltog/vim-easymotion'
+
+" syntax
+Plugin 'scrooloose/syntastic'
+
+" text object
+Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'
 
-" file system
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+" git
+Plugin 'tpope/vim-fugitive'
 
 " language
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
 Plugin 'fatih/vim-go'
-Bundle "pangloss/vim-javascript"
+Plugin 'pangloss/vim-javascript'
 
 
 " All of your Plugins must be added before the following line
@@ -52,6 +82,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+
+
+"################################
+"         Custom                "
+"################################
 syntax on
 set number
-let mapleader = ','
+
+" Map leader and localleader key to comma
+let mapleader = ","
+let g:mapleader = ","
+let maplocalleader = ","
+let g:maplocalleader = ","
