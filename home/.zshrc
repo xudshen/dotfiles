@@ -62,11 +62,17 @@ export PATH=${PATH}:${JBOSS_HOME}/bin
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=${HOME}/Workspace/go
 export PATH=$PATH:${GOROOT}/bin
+
+launchctl setenv GOROOT /usr/local/opt/go/libexec
+launchctl setenv GOPATH ${HOME}/Workspace/go
 # android studio path
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 # node.js path
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=$(/usr/libexec/java_home)
+# user email
+export USER_EMAIL=xudshen@hotmail.com
+launchctl setenv USER_EMAIL xudshen@hotmail.com
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -94,6 +100,7 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 alias -s rar='unrar x'
+alias -s 7z='7z x'
 
 alias tree='tree -N'
 # gitignore
