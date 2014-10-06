@@ -103,5 +103,7 @@ alias -s rar='unrar x'
 alias -s 7z='7z x'
 
 alias tree='tree -N'
+alias hgrep='history | grep'
+alias lgrep='ls -al | grep'
 # gitignore
 # function gi() { curl http://www.gitignore.io/api/$@ ;}

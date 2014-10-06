@@ -90,6 +90,7 @@ filetype plugin indent on    " required
 "################################
 syntax on
 set number
+set paste
 
 " Map leader and localleader key to comma
 let mapleader = ","
