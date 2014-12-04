@@ -18,9 +18,9 @@
         ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	ll = log --pretty=format:'%C(yellow)%h%Cred%d - %Creset%s%Cblue [%cn]' --decorate --numstat
 [filter "media"]
+	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-	required = true
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]

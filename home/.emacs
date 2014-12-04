@@ -17,7 +17,7 @@
 	        (goto-char (point-max))
 		    (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/el-get/recipes")
 (el-get 'sync)
 
 ;; el-get personal recipes
@@ -34,7 +34,7 @@
 ;; el-get official recipes
 (setq official-recipes
     (append
-     '(switch-window color-theme
+     '(switch-window
        markdown-mode json-mode ;; emacs edit enhancement
       )
     (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))

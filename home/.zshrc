@@ -66,7 +66,7 @@ export PATH=$PATH:${GOROOT}/bin
 launchctl setenv GOROOT /usr/local/opt/go/libexec
 launchctl setenv GOPATH ${HOME}/Workspace/go
 # android studio path
-export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
+export PATH=$PATH:/Applications/Android\ Studio.app/Contents/sdk/platform-tools
 # node.js path
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -107,3 +107,12 @@ alias hgrep='history | grep'
 alias lgrep='ls -al | grep'
 # gitignore
 # function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+# perl with cpan
+alias tsung_stat='/usr/local/Cellar/tsung/1.5.1/lib/tsung/bin/tsung_stats.pl'
+PERL_MB_OPT="--install_base \"/Users/xudshen/.perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/xudshen/.perl5"; export PERL_MM_OPT;
+export PERL5LIB=/Users/xudshen/.perl5/lib/perl5:/Users/xudshen/.perl5/lib/perl5/darwin-thread-multi-2level
+# this should be in /Users/xudshen/.cpan/CPAN/MyConfig.pm
+# 'makepl_arg' => q[INSTALL_BASE=/User/xudshen/.perl5],
+# 'mbuildpl_arg' => q[--install_base=/User/xudshen/.perl5],
