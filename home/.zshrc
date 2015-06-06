@@ -66,7 +66,8 @@ export PATH=$PATH:${GOROOT}/bin
 launchctl setenv GOROOT /usr/local/opt/go/libexec
 launchctl setenv GOPATH ${HOME}/Workspace/go
 # android studio path
-export PATH=$PATH:/Applications/Android\ Studio.app/Contents/sdk/platform-tools
+export ANDROID=/Users/xudshen/.androidsdk
+export PATH=$PATH:$ANDROID/platform-tools
 # node.js path
 export NODE_PATH=/usr/local/lib/node_modules
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -116,3 +117,4 @@ export PERL5LIB=/Users/xudshen/.perl5/lib/perl5:/Users/xudshen/.perl5/lib/perl5/
 # this should be in /Users/xudshen/.cpan/CPAN/MyConfig.pm
 # 'makepl_arg' => q[INSTALL_BASE=/User/xudshen/.perl5],
 # 'mbuildpl_arg' => q[--install_base=/User/xudshen/.perl5],
+alias oconnect="sudo ~/.ssh/openconnect.sh"
